@@ -2,16 +2,12 @@ import React from "react";
 import { render } from "react-dom";
 import { Router, Route, browserHistory, IndexRoute } from "react-router";
 
-
-
 import { Root } from "./components/Root";
 import { Home } from "./components/Home";
 import { Details } from "./components/Details";
 
 
 class App1 extends React.Component {
-
-
     render(){
         return(
             <Router history ={browserHistory}>
@@ -24,6 +20,5 @@ class App1 extends React.Component {
             </Router>
         );
     }
-
 }
 render(<App1 />, window.document.getElementById('app1'));
