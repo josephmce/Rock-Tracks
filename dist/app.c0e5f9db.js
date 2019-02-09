@@ -30612,15 +30612,13 @@ var Header =
 function (_React$Component) {
   _inherits(Header, _React$Component);
 
-  //ES6 - Check out
   function Header(props) {
     var _this;
 
     _classCallCheck(this, Header);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Header).call(this));
-    _this.state = {//You shouldn't assign props to your state, except for the case where this is the initial value
-    };
+    _this.state = {};
     return _this;
   }
 
@@ -30674,8 +30672,7 @@ var Sidebar = function Sidebar(props) {
     src: require('../Images/icon_1.png'),
     alt: "Track"
   }))));
-}; //Unused - <li><Link to={"/Details"} activeClassName="active"><img className="spinner" style ={listStyle} src={require('../Images/icon_2.png')} alt="Details"/></Link></li>
-
+};
 
 exports.Sidebar = Sidebar;
 },{"react":"node_modules/react/index.js","react-router":"node_modules/react-router/es/index.js","../Images/icon_1.png":"app/Images/icon_1.png"}],"app/Images/loading.gif":[function(require,module,exports) {
@@ -30726,7 +30723,6 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this));
     _this.state = {
-      //You shouldn't assign props to your state, except for the case where this is the initial value
       results: [],
       isLoading: false
     };
@@ -30824,8 +30820,7 @@ function (_React$Component) {
   }]);
 
   return Home;
-}(_react.default.Component); //JM - 08-02-2019 tidied up formatting, removed unecessary code, fixed the loading section not displaying correctly by adding a couple divs: <div className="module1"></div><div className="mainmodule">
-
+}(_react.default.Component);
 
 exports.Home = Home;
 },{"react":"node_modules/react/index.js","react-router":"node_modules/react-router/es/index.js","../Images/loading.gif":"app/Images/loading.gif"}],"app/components/Root.js":[function(require,module,exports) {
@@ -30874,7 +30869,6 @@ function (_React$Component) {
 
     _classCallCheck(this, Root);
 
-    //Always need to call super 1st if your extending from a class 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Root).call(this));
     _this.state = {
       homeMounted: true
@@ -30883,25 +30877,6 @@ function (_React$Component) {
   }
 
   _createClass(Root, [{
-    key: "onGreet",
-    value: function onGreet() {
-      alert("Hello");
-    }
-  }, {
-    key: "onChangeLinkName",
-    value: function onChangeLinkName(newName) {
-      this.setState({
-        homeLink: newName
-      });
-    }
-  }, {
-    key: "onChangeHomeMounted",
-    value: function onChangeHomeMounted() {
-      this.setState({
-        homeMounted: !this.state.homeMounted
-      });
-    }
-  }, {
     key: "render",
     value: function render() {
       var homeCmp = "";
@@ -30916,16 +30891,6 @@ function (_React$Component) {
 
   return Root;
 }(_react.default.Component);
-/*
-                    <div className="container">
-                        <div className="row">         
-                            <div className="col-xs-10 col-xs-offset-1">
-                                <button onClick={this.onChangeHomeMounted.bind(this)} className ="btn btn-primary" >(Un)Mount Home Component</button>                       
-                            </div>
-                        </div>
-                    </div>
-                    */
-
 
 exports.Root = Root;
 },{"react":"node_modules/react/index.js","./Header":"app/components/Header.js","./Sidebar":"app/components/Sidebar.js","./Home":"app/components/Home.js"}],"app/components/Details.js":[function(require,module,exports) {
@@ -30970,10 +30935,8 @@ function (_React$Component) {
 
     _classCallCheck(this, Details);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Details).call(this)); //React Property that sets our state
-
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Details).call(this));
     _this.state = {
-      //You shouldn't assign props to your state, except for the case where this is the initial value
       results: []
     };
     setTimeout(function () {
@@ -30981,7 +30944,6 @@ function (_React$Component) {
         status: 1
       });
     });
-    console.log("Constructor");
     return _this;
   }
 
@@ -30989,11 +30951,6 @@ function (_React$Component) {
     key: "onNavigateHome",
     value: function onNavigateHome() {
       _reactRouter.browserHistory.push("/home");
-    }
-  }, {
-    key: "openMoreDetails",
-    value: function openMoreDetails() {
-      window.open("https://www.w3schools.com");
     }
   }, {
     key: "render",
@@ -31006,7 +30963,6 @@ function (_React$Component) {
           durationTime = _this$props$location$.durationTime,
           releaseDate = _this$props$location$.releaseDate,
           trackviewURL = _this$props$location$.trackviewURL;
-      console.log(this.state);
       return _react.default.createElement("div", {
         className: "module1"
       }, _react.default.createElement("div", {
@@ -31129,7 +31085,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55789" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50074" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

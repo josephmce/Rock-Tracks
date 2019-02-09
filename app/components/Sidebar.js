@@ -2,11 +2,8 @@ import React from "react";
 import {Link} from "react-router";
 
 export const Sidebar = (props) =>{
-let listStyle=
-{
-        width:'100%'
-        
-}
+
+let listStyle={width:'100%'}
 
         return(
             <ul className="main-nav">

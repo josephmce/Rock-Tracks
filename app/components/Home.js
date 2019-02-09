@@ -72,4 +72,3 @@ export class Home extends React.Component {
         );
     }
 }
-//JM - 08-02-2019 tidied up formatting, removed unecessary code, fixed the loading section not displaying correctly by adding a couple divs: <div className="module1"></div><div className="mainmodule">

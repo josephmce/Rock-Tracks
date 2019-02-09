@@ -1,8 +1,6 @@
 import React from "react";
 
-
 export class Header extends React.Component {
-    //ES6 - Check out
     constructor(props) {
         super();
         this.state = {
