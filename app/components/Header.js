@@ -6,12 +6,8 @@ export class Header extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            //You shouldn't assign props to your state, except for the case where this is the initial value
-
         };
-    }
-
-    
+    }    
         render() {
         return(
             <div className="toprow">

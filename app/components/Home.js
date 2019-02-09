@@ -8,7 +8,6 @@ export class Home extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            //You shouldn't assign props to your state, except for the case where this is the initial value
             results: [],
             isLoading: false
         };

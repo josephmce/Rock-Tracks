@@ -30719,14 +30719,12 @@ var Home =
 function (_React$Component) {
   _inherits(Home, _React$Component);
 
-  //ES6 - Check out
   function Home(props) {
     var _this;
 
     _classCallCheck(this, Home);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this)); //React Property that sets our state
-
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this));
     _this.state = {
       //You shouldn't assign props to your state, except for the case where this is the initial value
       results: [],
@@ -30769,7 +30767,7 @@ function (_React$Component) {
         return _react.default.createElement("div", {
           className: "module1"
         }, _react.default.createElement("div", {
-          className: "config"
+          className: "mainmodule"
         }, _react.default.createElement("div", {
           className: "gridContainer"
         }, _react.default.createElement("div", {
@@ -30781,7 +30779,7 @@ function (_React$Component) {
 
       return _react.default.createElement("div", {
         className: "module1"
-      }, _react.default.createElement("div", null), _react.default.createElement("div", {
+      }, _react.default.createElement("div", {
         className: "mainmodule"
       }, _react.default.createElement("div", {
         className: "gridContainer"
@@ -30826,22 +30824,10 @@ function (_React$Component) {
   }]);
 
   return Home;
-}(_react.default.Component);
+}(_react.default.Component); //JM - 08-02-2019 tidied up formatting, removed unecessary code, fixed the loading section not displaying correctly by adding a couple divs: <div className="module1"></div><div className="mainmodule">
+
 
 exports.Home = Home;
-Home.propTypes = {};
-/*
-<br/>
-                    <hr/>
-                        <button onClick={this.props.greet} className="btn btn-primary">Greet</button>
-                        <hr/>
-                        <input type="text" value={this.state.homeLink} onChange={(event) => this.onHandleChange(event)} />                       
-                        <button onClick={this.onChangeLink.bind(this)} className="btn btn-primary">Change Header Link</button>
-                        <hr/>
-                        */
-//Button on click could also be this ~~~~~ <button onClick={this.onMakeOlder.bind(this)} className ="btn btn-primary">Make me older!</button>
-//{this.props.name}, Age: {this.state.age} <button onClick={() => this.onMakeOlder()} className="btn btn-primary">Make me older!</button>
-//Status: {this.state.status}
 },{"react":"node_modules/react/index.js","react-router":"node_modules/react-router/es/index.js","../Images/loading.gif":"app/Images/loading.gif"}],"app/components/Root.js":[function(require,module,exports) {
 "use strict";
 
@@ -31143,7 +31129,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61900" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55789" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

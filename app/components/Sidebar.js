@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router";
 
 export const Sidebar = (props) =>{
-var listStyle=
+let listStyle=
 {
         width:'100%'
         
@@ -15,5 +15,3 @@ var listStyle=
             </ul>
         );
 };
-//Unused - <li><Link to={"/Details"} activeClassName="active"><img className="spinner" style ={listStyle} src={require('../Images/icon_2.png')} alt="Details"/></Link></li>
-
