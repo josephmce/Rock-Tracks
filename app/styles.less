@@ -161,6 +161,7 @@ li a:hover:not(.active) {
     &:hover{
         cursor: pointer;
     }
+}
 .linebreak{
     width:100%; 
     border-bottom: 1px dashed @mainthemecolor2;
@@ -172,17 +173,7 @@ li a:hover:not(.active) {
         background-color:@mainthemecolor3;
     }
 }
-.spinner:hover {
-    animation: spinner 2.5s infinite linear;
-  }
-  @keyframes spinner {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(359deg);
-    }
-  }
+
   .detailslink{
       font-size:20px;
       font-weight:bold;
@@ -193,4 +184,18 @@ li a:hover:not(.active) {
       &:hover{
         background: @mainthemecolor2;
       }
-  }}
+  }
+
+
+  .icon-spin:hover {
+    animation: spin 2.5s infinite linear;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+  }
+  
